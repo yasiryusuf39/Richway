@@ -488,7 +488,6 @@ footer{
   /* Heading */
 
   nav{
-  /* flex-wrap: wrap; */
   padding: 1em 2em;
   justify-content: center;
   align-items: center;
@@ -528,9 +527,7 @@ footer{
   }
 
   .sectionOne-card img{
-    /* margin-bottom: 7em; */
     flex-shrink: 1;
-    /* margin-right: 0.7em; */
   }
 
   .sectionOne-container > img{
@@ -558,6 +555,10 @@ footer{
 }
 
 @media (max-width: 768px) {
+  .subHeading{
+    display: none;
+  }
+
   .hero{
     padding-left: 3em;
     padding-right: 3em;
@@ -617,10 +618,6 @@ footer{
   }
 
   /* heading and sub-heading */
-
-  .subHeading{
-    display: none;
-  }
 
   nav{
     flex-wrap: wrap;
