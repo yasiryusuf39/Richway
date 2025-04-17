@@ -1,5 +1,5 @@
 import React from "react"
-import Card from "./Reusable/card"
+import Card from "./Reusable/Card"
 
 export default function SectionTwo(){
     return(
