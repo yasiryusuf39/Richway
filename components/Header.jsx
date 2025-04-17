@@ -1,6 +1,7 @@
 import React from "react"
 import { IoLockClosedOutline } from "react-icons/io5";
 import SubHeader from "./SubHeader";
+import logo from "/src/assets\/images\/logo.png"
 
 export default function Header() {
     const openAcct = {color: "#317301",
@@ -12,7 +13,7 @@ export default function Header() {
     return <header>
         <SubHeader />
             <nav>
-                    <img src="./src/assets\/images\/logo.png" />
+                    <img src={logo} />
                 <div className="hero-menu">
                         <p>Home</p>
                         <p>Personal Banking</p>

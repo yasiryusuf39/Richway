@@ -4,6 +4,8 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { TiSocialInstagramCircular } from "react-icons/ti";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import FooterText from "./Reusable/FooterText";
+import iphone from "/src/assets/images/appstore.png"
+import playstore from "/src/assets/images/playstore.png"
 
 export default function Footer(){
     return(
@@ -16,8 +18,8 @@ export default function Footer(){
                 <FooterText>Legal</FooterText>
                 <div className="footerGetApp">
                     <h2>Get the app</h2>
-                    <img src="../src/assets/images/appstore.png" alt="Get it on Appstore"/>
-                    <img src="../src/assets/images/playstore.png" alt="Get it on Playstore"/>
+                    <img src={iphone} alt="Get it on Appstore"/>
+                    <img src={playstore} alt="Get it on Playstore"/>
                 </div>
                     
             </div>

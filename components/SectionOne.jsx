@@ -1,6 +1,9 @@
 import React from "react"
 import CheckMark from "./Reusable/CheckMark"
 import { PiChatTeardropTextFill } from "react-icons/pi";
+import iphone from "/src/assets/images/appstore.png"
+import playstore from "/src/assets/images/playstore.png"
+import phone from "/src/assets/images/phone.png"
 
 export default function SectionOne(){
     return(
@@ -25,10 +28,10 @@ export default function SectionOne(){
                         </div>
                     </div>
                 </div>
-                <img src="../src/assets/images/appstore.png" alt="Get it on Appstore"/>
-                <img src="../src/assets/images/playstore.png" alt="Get it on Playstore"/>
+                <img src={iphone} alt="Get it on Appstore"/>
+                <img src={playstore} alt="Get it on Playstore"/>
             </div>
-            <img src="../src/assets/images/phone.png" alt="A phone picture"/>
+            <img src={phone} alt="A phone picture"/>
             <div className="chat-icon"><PiChatTeardropTextFill style={{width: "2em", height:"2em"}} /></div>
         </div>
     )

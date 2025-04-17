@@ -1,4 +1,5 @@
 import React from "react"
+import card from "/src/assets/images/card.png"
 
 export default function SectionThree(){
     return(
@@ -10,7 +11,7 @@ export default function SectionThree(){
                     bills, pay bills etc.</p>
             <div className="btn">Request Card</div>
             </div>
-            <img src="../src/assets/images/card.png" />
+            <img src={card} />
         </div>
     )
 }
