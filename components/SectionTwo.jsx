@@ -12,7 +12,7 @@ export default function SectionTwo(){
                 <p>Tailored to your lifestyle, designed for your
                 personal and business needs.</p>
             <div className="sectionTwo-card">
-                <Card 
+                <Card
                 image={piggy}
                 title="Personal Loan"
                 text="Achieve your personal goals with our flexible personal loans, designed to 
