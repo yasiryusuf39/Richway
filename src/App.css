@@ -25,6 +25,9 @@ nav{
 nav > img{
   margin-right: 2em;
   cursor: pointer;
+  width: 30%;
+  max-width: 135px;
+  min-width: 120px;
 }
 
 header{
@@ -33,16 +36,25 @@ header{
   right: 0;
   left: 0;
   z-index: 1000;
+  width: 100%;
+}
 
+.header-container{
+  max-width: 2048px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  /* align-items: center; */
 }
 
 .hero-menu {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+  justify-content: space-around;
   gap: 0.93em;
-  
+  width: 100%;
 }
 
 
@@ -68,6 +80,7 @@ Header p{
   border-radius: 8px;
   background: #5E039F;
   font-weight: 400;
+  color: white;
   cursor: pointer;
 }
 
@@ -75,6 +88,10 @@ Header p{
   color: #FFF;
   font-size: 0.88rem;
   line-height: 1.25rem; /* 142.857% */
+}
+
+.hero-menu > .btn{
+  margin-left: auto;
 }
 
 .menu-stipe{
@@ -146,7 +163,7 @@ Header p{
 
 .hero-button{
   padding: 0.75em 1em;
-  color: #FFFFFF;
+  color: white;
   background-color: #317301;
   display: inline-block;
   border-radius: 8px;
@@ -176,6 +193,7 @@ Header p{
 .chat-icon{
   display: flex;
   justify-content: center;
+  color: white;
   align-items: center;
   width: 3.75em;
   height: 3.75em;
@@ -186,6 +204,7 @@ Header p{
   bottom: 5em;
   right: 6em;
   cursor: pointer;
+  z-index: 1000;
 }
 
 /* Hero card */
@@ -220,6 +239,7 @@ Header p{
   display: flex;
   border-radius: 50%;
   background: #4A007E;
+  color: white;
   padding: 12px;
   align-items: center;
   justify-content: center;
@@ -263,12 +283,13 @@ Header p{
   display: flex;
   flex-direction: column;
   gap: 0.94em;
+  flex:1;
 }
 
 .cm{
   display: flex;
   justify-content: left;
-  gap: 8.75em;
+  /* gap: 5em; */
 }
 
 /* Section One */
@@ -287,21 +308,29 @@ Header p{
 
 .sectionOne-container > img{
   margin: 0;
-  width: 300px;
+  height: 80%;
+  /* width: 300px; */
   height: fit-content;
-  
-  
+  max-width: 300px;
+}
+
+.sectionOne-card{
+  max-width: 600px;
 }
 
 .sectionOne-container{
   display: flex;
   align-items: center;
-  gap: 15em;
+  gap: 1em;
   padding-top: 11em;
   padding-bottom: 7em;
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 
+
+.sectionOne-container > img{
+  margin-bottom: 5em;
+}
 /* Section two */
 
 .sectionTwo-container{
@@ -392,8 +421,8 @@ p.secTwo-btn{
   padding-top: 12em;
   padding-bottom: 19em;
   align-items: center;
-  gap: 12em;
-  /* justify-content: space-between; */
+  gap: 2em;
+  justify-content: space-around;
   background:url("../src/assets/images/vector.png");
   background-repeat: no-repeat;
   background-position: bottom;
@@ -415,7 +444,13 @@ p.secTwo-btn{
   line-height: 1.5rem; /* 150% */
   margin-top: 1em;
   margin-bottom: 2.5em;
+  max-width: 650px;
+}
+
+.sectionThree-container > img{
+  width: 100%;
   max-width: 500px;
+  min-width: 350px;
 }
 
 /* footer */
@@ -434,6 +469,7 @@ footer{
   justify-content: space-between;
   align-items: start;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .ft-text p, .ft-text img{
@@ -449,6 +485,10 @@ footer{
   background: #5E039F;
   justify-content: space-between;
   width: 100%;
+}
+
+.footer-banner p{
+  color: white;
 }
 
 .footer-icons{
@@ -578,70 +618,215 @@ footer{
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
+  
+  body{
+    display:contents;
+  }
+  
+   /* heading and sub-heading */
+  
+   .menu-stipe{
+    display: flex;
+    color: #141414;
+    width: 7%;
+    height: 7%;
+    max-width: 50px;
+    min-width: 24px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  /* heading */
+  
+  .menu-disable{
+    display: none;
+  }
+  
+  nav{
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1em 1.5em;
+    justify-content: center;
+    align-items: center;
+    gap: 0.88em;
+    }
+
+    nav > img{
+      z-index: 1000;
+    }
+  
+  
   .subHeading{
     display: none;
   }
-
+  
   .hero{
     padding-left: 3em;
     padding-right: 3em;
   }
-
-  nav{
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 0.88em;
-  }
-
+  
+  
   .btn{
     margin-left: 0;
+  }
+
+  .hero-menu{
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    top: 4em;
+    left: 0;
+    right: 0;
+    align-items: start;
+    gap: 1em;
+    padding: 2em;
+    padding-top: 1em;
+    z-index: 1;
+  }
+
+  .hero-menu> .btn{
+    margin-left: 0;
+  }
+
+  .hero-menu > p{
+    margin: 0;
+  }
+
+  /* section one */
+
+  .cm{
+    gap: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* hero */
+
+  .hero{
+    padding-top: 5em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .card{
+    flex-direction: column;
+    /* position: none; */
+    gap: 1em;
+    top: 12em;
+    padding: 1em;
+    max-width: 400px;
+    
+  }
+
+  .page-toggle{
+
+    margin-bottom: 0;
+  }
+
+
+  /* Section one */
+
+  .sectionOne-container{
+    flex-direction: column;
+    padding-top: 4em;
+    padding-bottom: 3em;
+    margin-bottom: 3em;
+  }
+
+  
+  .sectionOne-container > img{
+    margin-top: 4em;
+    margin-bottom: 2em;
+    width: 70%;
   }
 
   .cm{
     gap: 0;
   }
-  .sectionOne-container{
-    align-items: center;
-    margin-bottom: 3em;
+
+  .sectionOne-card > img{
+    margin-bottom: 0;
+    margin-top: 1.5em;
+    margin-right: 1em;
   }
+
+  /* Section two */
+
+.sectionTwo-card{
+  flex-direction: column;
+  margin: 0 auto;
 }
+
+p.secTwo-btn{
+  margin-top: 2em;
+}
+
+/* section three */
+
+.sectionThree-container{
+  flex-direction: column;
+  margin-top: 7em;
+  padding-top: 0;
+  gap: 4em;
+}
+
+.sectionThree-container div.btn{
+  max-width: fit-content;
+}
+
+.sectionThree-container img{
+  margin-top: 3.5em;
+  width: 90%;
+  order: -1;
+}
+
+.secThree-content p{
+  max-width: fit-content;
+}
+
+/* footer */
+
+footer{
+  gap: 3em;
+}
+
+.ft-text{
+  flex-wrap: wrap;
+  gap:1em;
+}
+.ft-text p{
+  flex: 1 1 100%;
+}
+
+.footer-banner{
+  flex-direction: column;
+}
+
+.chat-icon{
+  right: 5em;
+ 
+}
+}
+
+
+
 
 @media (max-width: 480px){
 
-  body{
-    display:contents;
-  }
+ 
   
   /* Hero */
 
   .hero{
-    padding-top: 10em;
+    padding-top: 8em;
     padding-left: 1em;
     padding-right: 1em;
   }
 
   .hero h1{
     padding-top: 2em;
-  }
-
-  .page-toggle{
-    margin-bottom: 3em;
-    padding-bottom: 0;
-  }
-
-  .container{
-    padding-bottom: 3em;
-  }
-
-  .card{
-    flex-direction: column;
-    position: none;
-    gap: 1em;
-    top: 0;
-    padding: 1em;
-    margin-bottom: 3em;
-    
   }
 
   .hero-menu{
@@ -652,48 +837,13 @@ footer{
     flex: 1 1 0;
   }
 
-  /* heading and sub-heading */
-
-  .menu-stipe{
-    display: flex;
-    color: #141414;
-    width: 10%;
-    height: 10%;
-    min-width: 24px;
-    margin-left: auto;
-    cursor: pointer;
-  }
-
-  .menu-disable{
-    display: none;
-  }
-
-  nav{
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 1em 1.5em;
-    justify-content: center;
-    align-items: center;
-    }
-
-    nav>img{
-      width: 30%;
-      min-width: 120px;
-    }
+ 
   
     /* section one */
-
-    .sectionOne-container{
-      flex-direction: column;
-      padding-top: 4em;
-      padding-bottom: 3em;
-    }
+.sectionOne-container{
+  padding-top: 10em;
+}
     
-    .sectionOne-container > img{
-      margin-top: 4em;
-      margin-bottom: 2em;
-      width: 80%;
-    }
 
     .cm{
       flex-direction: column;
@@ -703,62 +853,5 @@ footer{
       gap: 1em;
     }
 
-    .sectionOne-card > img{
-      margin-bottom: 0;
-      margin-top: 1.5em;
-      margin-right: 1em;
-    }
-
-    /* section two */
-
-    .sectionTwo-card{
-      flex-direction: column;
-      margin: 0 auto;
-    }
-
-    p.secTwo-btn{
-      margin-top: 2em;
-    }
-
-    /* section three */
-
-    .sectionThree-container{
-      flex-direction: column;
-      margin-top: 7em;
-      padding-top: 0;
-      gap: 4em;
-    }
     
-    .sectionThree-container div.btn{
-      max-width: fit-content;
-    }
-    
-    .sectionThree-container img{
-      margin-top: 3.5em;
-      width: 80%;
-      order: -1;
-    }
-
-    /* footer */
-
-    footer{
-      gap: 3em;
-    }
-
-    .ft-text{
-      flex-wrap: wrap;
-      gap:1em;
-    }
-    .ft-text p{
-      flex: 1 1 100%;
-    }
-
-    .footer-banner{
-      flex-direction: column;
-    }
-
-    .chat-icon{
-      right: 5em;
-     
-    }
 }

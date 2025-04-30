@@ -19,7 +19,12 @@ export default function Hero() {
             <div className="card">
                 <div className="indiv-card">
                     <div className="avatar">
-                    <HiOutlineUserAdd style={{width: "2em", height: "2em"}} />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M24.6668 26H19.3335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 28.6667V23.3333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.2135 14.4933C16.0801 14.48 15.9201 14.48 15.7735 14.4933C12.6001 14.3867 10.0801 11.7867 10.0801 8.58666C10.0668 5.31999 12.7201 2.66666 15.9868 2.66666C19.2535 2.66666 21.9068 5.31999 21.9068 8.58666C21.9068 11.7867 19.3735 14.3867 16.2135 14.4933Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.9867 29.08C13.5601 29.08 11.1467 28.4667 9.30672 27.24C6.08005 25.08 6.08005 21.56 9.30672 19.4133C12.9734 16.96 18.9867 16.96 22.6534 19.4133" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <p className="card-title" style={{fontSize: "1.05rem", fontWeight: "600"}}>Open an account.</p>
                     <p style={{fontSize: "0.88rem"}}>Open an account and open your world to more.</p>
