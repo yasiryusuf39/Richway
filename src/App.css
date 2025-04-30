@@ -767,8 +767,7 @@ p.secTwo-btn{
 
 .sectionThree-container{
   flex-direction: column;
-  margin-top: 7em;
-  padding-top: 0;
+  padding-top: 7em;
   gap: 4em;
 }
 
@@ -777,7 +776,6 @@ p.secTwo-btn{
 }
 
 .sectionThree-container img{
-  margin-top: 3.5em;
   width: 90%;
   order: -1;
 }
@@ -843,13 +841,11 @@ footer{
 .sectionOne-container{
   padding-top: 10em;
 }
-    
-
-    .cm{
-      flex-direction: column;
+ .cm{
+  flex-direction: column;
     }
     
-    .section-cm, .cm{
+  .section-cm, .cm{
       gap: 1em;
     }
 
